@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MezuniyetKontrol.OzetSayfasi"
+             Title="Özet">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="8">
+
+            <Label Text="Öğrenci Profili" FontSize="20" FontAttributes="Bold" />
+            <Label x:Name="adLabel" />
+            <Label x:Name="numaraLabel" />
+            <Label x:Name="seviyeLabel" />
+            <Label x:Name="tezLabel" />
+
+            <Label Text="Dersler" FontSize="20" FontAttributes="Bold" />
+            <VerticalStackLayout x:Name="derslerLayout" />
+
+            <Label Text="Sonuç" FontSize="20" FontAttributes="Bold" />
+            <Label x:Name="krediLabel" />
+            <Label x:Name="gpaLabel" FontAttributes="Bold" />
+            <Label x:Name="sonucLabel" FontSize="22" FontAttributes="Bold" />
+            <Label x:Name="nedenLabel" />
+
+            <Button Text="Yeni Öğrenci" Clicked="YeniOgrenci" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

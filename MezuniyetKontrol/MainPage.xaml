@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MezuniyetKontrol.MainPage"
+             Title="Mezuniyet Kontrol">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+
+            <Label Text="Öğrenci Bilgileri" FontSize="20" FontAttributes="Bold" />
+            <Entry x:Name="adEntry" Placeholder="Ad" />
+            <Entry x:Name="soyadEntry" Placeholder="Soyad" />
+            <Entry x:Name="numaraEntry" Placeholder="Öğrenci Numarası" Keyboard="Numeric" />
+
+            <Label Text="Eğitim Seviyesi" />
+            <Picker x:Name="seviyePicker" Title="Seçiniz" SelectedIndexChanged="SeviyeDegisti">
+                <Picker.Items>
+                    <x:String>Lisans</x:String>
+                    <x:String>Yüksek Lisans</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <VerticalStackLayout x:Name="tezAlani" IsVisible="False">
+                <Label Text="Tez Çalışması Durumu" />
+                <Picker x:Name="tezPicker" Title="Seçiniz">
+                    <Picker.Items>
+                        <x:String>Tamamlandı</x:String>
+                        <x:String>Tamamlanmadı</x:String>
+                    </Picker.Items>
+                </Picker>
+            </VerticalStackLayout>
+
+            <Label Text="Ders Bilgileri" FontSize="20" FontAttributes="Bold" />
+            <Entry x:Name="dersSayisiEntry" Placeholder="Toplam ders sayısı" Keyboard="Numeric" />
+            <Button Text="Dersleri Oluştur" Clicked="DersleriOlustur" />
+
+            <VerticalStackLayout x:Name="derslerLayout" Spacing="6" />
+
+            <Button x:Name="hesaplaButton" Text="Hesapla" IsVisible="False" Clicked="Hesapla" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
