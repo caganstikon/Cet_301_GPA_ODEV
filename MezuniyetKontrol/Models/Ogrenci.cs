@@ -1,5 +1,8 @@
 namespace MezuniyetKontrol.Models;
 
+
+// öğrenci data setleri
+
 public class Ogrenci
 {
     public string Ad { get; set; } = "";
@@ -9,3 +12,4 @@ public class Ogrenci
     public bool TezTamamlandi { get; set; }
     public List<Ders> Dersler { get; set; } = new List<Ders>();
 }
+
